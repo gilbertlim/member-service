@@ -1,6 +1,7 @@
 package com.gilbert.msa.controller;
 
 import com.gilbert.msa.domain.dto.MemberDto;
+import com.gilbert.msa.domain.dto.OrderDto;
 import com.gilbert.msa.service.MemberService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -45,9 +46,9 @@ public class MemberController {
         memberService.deleteMember(requestDto);
     }
 
-//    @GetMapping("/orders")
-//    public List<OrderDto> getOrders() {
-//        log.info("getOrders");
-//        return memberService.getOrders();
-//    }
+    @GetMapping("/orders")
+    public List<OrderDto> getOrders() {
+        log.info("getOrders");
+        return memberService.getOrders();
+    }
 }
