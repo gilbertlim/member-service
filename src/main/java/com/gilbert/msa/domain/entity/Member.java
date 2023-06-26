@@ -3,8 +3,6 @@ package com.gilbert.msa.domain.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.AccessLevel;
@@ -20,12 +18,17 @@ import lombok.NoArgsConstructor;
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int memberNum;
+    private String member_id;
 
     @Column
-    private String memberId;
+    private String name;
 
     @Column
-    private String memberName;
+    private String email;
+
+    @Column
+    private String phone;
+
+    @Column
+    private String address;
 }
