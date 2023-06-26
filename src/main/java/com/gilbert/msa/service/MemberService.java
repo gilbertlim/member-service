@@ -1,6 +1,8 @@
 package com.gilbert.msa.service;
 
+import com.gilbert.msa.client.OrderFeignClient;
 import com.gilbert.msa.domain.dto.MemberDto;
+import com.gilbert.msa.domain.dto.OrderDto;
 import com.gilbert.msa.domain.entity.Member;
 import com.gilbert.msa.domain.mapper.MemberMapper;
 import com.gilbert.msa.repository.MemberRepository;
@@ -16,6 +18,7 @@ public class MemberService {
 
     private final MemberRepository repository;
     private final MemberMapper mapper;
+    private final OrderFeignClient orderFeignClient;
 
     @Transactional
     public void createMember(MemberDto dto) {
@@ -41,6 +44,7 @@ public class MemberService {
         repository.delete(mapper.toEntity(dto));
     }
 
-//    public List<OrderDto> getOrders() {
-//    }
+    public List<OrderDto> getOrders() {
+        return orderFeignClient.getOrders();
+    }
 }
