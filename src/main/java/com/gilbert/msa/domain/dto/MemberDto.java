@@ -7,7 +7,13 @@ import lombok.Setter;
 @Setter
 public class MemberDto {
 
-    private int memberNum;
     private String memberId;
-    private String memberName;
+
+    private String name;
+
+    private String email;
+
+    private String phone;
+
+    private String address;
 }

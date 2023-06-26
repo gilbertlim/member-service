@@ -27,10 +27,10 @@ public class MemberController {
         memberService.createMember(requestDto);
     }
 
-    @GetMapping("/{memberNum}")
-    public MemberDto getMember(@PathVariable String memberNum) {
+    @GetMapping("/{memberId}")
+    public MemberDto getMember(@PathVariable String memberId) {
         log.info("getMember");
-        return memberService.getMember(memberNum);
+        return memberService.getMember(memberId);
     }
 
     @GetMapping
