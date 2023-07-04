@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Member {
 
     @Id
-    private String member_id;
+    private String memberId;
 
     @Column
     private String name;

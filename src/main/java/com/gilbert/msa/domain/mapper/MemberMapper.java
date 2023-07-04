@@ -8,9 +8,7 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface MemberMapper {
 
-    @Mapping(source = "memberId", target = "member_id")
     Member toEntity(MemberDto memberDto);
 
-    @Mapping(source = "member_id", target = "memberId")
     MemberDto toDto(Member member);
 }

@@ -40,8 +40,8 @@ public class MemberService {
     }
 
     @Transactional
-    public void deleteMember(MemberDto dto) {
-        repository.delete(mapper.toEntity(dto));
+    public void deleteMember(String memberId) {
+        repository.deleteById(memberId);
     }
 
     public List<OrderDto> getOrders() {

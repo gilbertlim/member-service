@@ -40,10 +40,10 @@ public class MemberController {
         return memberService.getMembers();
     }
 
-    @DeleteMapping
-    public void deleteMember(@RequestBody MemberDto requestDto) {
+    @DeleteMapping("/{memberId}")
+    public void deleteMember(@PathVariable String memberId) {
         log.info("deleteMember");
-        memberService.deleteMember(requestDto);
+        memberService.deleteMember(memberId);
     }
 
     @GetMapping("/orders")
