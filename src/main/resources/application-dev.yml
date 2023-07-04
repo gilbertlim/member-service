@@ -1,0 +1,3 @@
+service:
+  order:
+    base-url: http://order:8080
